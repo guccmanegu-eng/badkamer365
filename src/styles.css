@@ -1,0 +1,295 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * badkamer365.nl — huisstijl 365-familie
+ * Navy #0B1F3A · Signal blue #2E86DE · Soft blue #CFE8FF · Cloud #F5F8FC · Ink #10243F
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Figtree", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* merkkleuren */
+  --color-navy: var(--navy);
+  --color-signal: var(--signal);
+  --color-soft: var(--soft);
+  --color-cloud: var(--cloud);
+  --color-ink: var(--ink);
+  --color-cat-badkamer: var(--cat-badkamer);
+  --color-cat-sanitair: var(--cat-sanitair);
+  --color-cat-keuken: var(--cat-keuken);
+  --color-cat-vloeren: var(--cat-vloeren);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --navy: oklch(0.24 0.058 258.5);
+  --signal: oklch(0.629 0.163 254.3);
+  --soft: oklch(0.912 0.041 240.5);
+  --cloud: oklch(0.977 0.006 247.9);
+  --ink: oklch(0.263 0.061 259);
+
+  --cat-badkamer: oklch(0.629 0.163 254.3);
+  --cat-sanitair: oklch(0.657 0.096 190);
+  --cat-keuken: oklch(0.771 0.106 68);
+  --cat-vloeren: oklch(0.594 0.104 45);
+
+  --background: oklch(1 0 0);
+  --foreground: var(--navy);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--navy);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--navy);
+  --primary: var(--signal);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--cloud);
+  --secondary-foreground: var(--navy);
+  --muted: var(--cloud);
+  --muted-foreground: oklch(0.53 0.033 254);
+  --accent: var(--soft);
+  --accent-foreground: var(--navy);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.923 0.012 250);
+  --input: oklch(0.923 0.012 250);
+  --ring: var(--signal);
+
+  --chart-1: var(--signal);
+  --chart-2: var(--cat-sanitair);
+  --chart-3: var(--cat-keuken);
+  --chart-4: var(--cat-vloeren);
+  --chart-5: var(--navy);
+  --sidebar: var(--cloud);
+  --sidebar-foreground: var(--navy);
+  --sidebar-primary: var(--signal);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: var(--soft);
+  --sidebar-accent-foreground: var(--navy);
+  --sidebar-border: oklch(0.923 0.012 250);
+  --sidebar-ring: var(--signal);
+
+  --shadow-soft: 0 18px 45px -22px color-mix(in oklab, var(--navy) 45%, transparent);
+  --shadow-lift: 0 28px 60px -28px color-mix(in oklab, var(--navy) 55%, transparent);
+  --gradient-navy: linear-gradient(
+    140deg,
+    var(--navy) 0%,
+    color-mix(in oklab, var(--navy) 82%, var(--signal)) 100%
+  );
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ---------- animaties ---------- */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift-in {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes drop-fall {
+  0% {
+    transform: translateY(-18px) scale(0.9);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sheen {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+
+  &[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-drift {
+  animation: drift-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@utility animate-drop {
+  animation: drop-fall 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-marquee {
+  animation: marquee 26s linear infinite;
+}
+
+@utility ripple-ring {
+  animation: ripple 3.6s ease-out infinite;
+}
+
+@utility surface-navy {
+  background: var(--gradient-navy);
+  color: oklch(0.99 0.002 250);
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility lift-hover {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
