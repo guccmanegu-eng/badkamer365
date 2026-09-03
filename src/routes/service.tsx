@@ -76,9 +76,9 @@ function Service() {
         <Reveal delay={120} className="mt-12 rounded-3xl border border-border bg-soft/40 p-8">
           <h2 className="text-2xl text-navy">Storing of lekkage?</h2>
           <p className="mt-2 text-navy/65">
-            Bel de servicelijn op <span className="font-semibold text-navy">085 - 365 36 50</span>{" "}
+            Bel de servicelijn op <span className="font-semibold text-navy">06 - 12 34 56 78</span>{" "}
             of mail naar{" "}
-            <span className="font-semibold text-navy">service@badkamer365.nl</span>.
+            <span className="font-semibold text-navy">info@badkamer365.nl</span>.
           </p>
         </Reveal>
       </section>
