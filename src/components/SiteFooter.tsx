@@ -46,7 +46,7 @@ export function SiteFooter() {
               </Link>
             </nav>
             <p className="mt-8 text-sm text-white/55">
-              085 - 365 36 50 · hallo@badkamer365.nl
+              06 - 12 34 56 78 · info@badkamer365.nl
             </p>
           </Reveal>
         </div>
