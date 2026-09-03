@@ -48,9 +48,9 @@ function Contact() {
 
         <div className="mt-10 space-y-4">
           {[
-            { icon: Phone, label: "085 - 365 36 50" },
-            { icon: Mail, label: "hallo@badkamer365.nl" },
-            { icon: MapPin, label: "Showroom Amersfoort · di t/m za" },
+            { icon: Phone, label: "06 - 12 34 56 78" },
+            { icon: Mail, label: "service@badkamer365.nl" },
+            { icon: MapPin, label: "Showroom · di t/m za" },
           ].map((c, i) => (
             <Reveal key={c.label} delay={i * 100}>
               <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4">
